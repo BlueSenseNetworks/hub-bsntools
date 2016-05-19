@@ -11,13 +11,11 @@ setup(
     platforms=["arm"],
 
     # Packages
-    packages=["bsntools", "bsntools.daemon", "bsntools.firstboot", "bsntools.prepareservices"],
+    packages=["bsntools", "bsntools.firstboot"],
 
     entry_points={
         'console_scripts': [
-            'bsnd = bsntools.daemon.__main__:main',
-            'bsn-firstboot = bsntools.firstboot.__main__:main',
-            'bsn-prepare-services = bsntools.prepareservices.__main__:main'
+            'bsn-firstboot = bsntools.firstboot.__main__:main'
         ],
     }
 )
