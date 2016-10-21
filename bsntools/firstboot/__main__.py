@@ -2,6 +2,7 @@ import os
 import logging
 import resizedisk
 import hostname
+import puppet
 
 
 def main():
@@ -18,6 +19,9 @@ def main():
 
     logging.debug('Resize disk')
     resizedisk.resize()
+
+    logging.debug('Set up puppet')
+    puppet.setup()
 
 if __name__ == "__main__":
     main()
